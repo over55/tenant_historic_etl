@@ -1,3 +1,56 @@
+#—————————
+# OSX
+#—————————
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+
+#—————————
+# WINDOWS
+#—————————
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+#—————————
+# LINUX
+#—————————
+# KDE directory preferences
+.directory
+.idea  # PyCharm
+*/.idea/
+
+#—————————
+# Python
+#—————————
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -8,6 +61,7 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+env/
 build/
 develop-eggs/
 dist/
@@ -23,7 +77,6 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-MANIFEST
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -45,7 +98,6 @@ nosetests.xml
 coverage.xml
 *.cover
 .hypothesis/
-.pytest_cache/
 
 # Translations
 *.mo
@@ -54,7 +106,6 @@ coverage.xml
 # Django stuff:
 *.log
 local_settings.py
-db.sqlite3
 
 # Flask stuff:
 instance/
@@ -81,14 +132,13 @@ celerybeat-schedule
 # SageMath parsed files
 *.sage.py
 
-# Environments
+# dotenv
 .env
+
+# virtualenv
 .venv
-env/
 venv/
 ENV/
-env.bak/
-venv.bak/
 
 # Spyder project settings
 .spyderproject
@@ -102,3 +152,45 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+
+#—————————————————————————————
+# Python VirtualEnv Directory
+#—————————————————————————————
+# Important Note: Make sure this is the name of the virtualenv directory
+# that you set when you where setting up the project.
+env/
+env/*
+env
+.env
+*.cfg
+env/pip-selfcheck.json
+*.csv#
+
+#—————————————————————————————
+# Application Specific Ignores
+#—————————————————————————————
+# Important Note: Make sure this is the name of the virtualenv directory
+# that you set when you where setting up the project.
+# Do not share our secret configuration file.
+tenant_historic_etl/csv
+
+# Do not share our converage file.
+coverage.txt
+
+# Do not share your `sqlite3` database related files.
+workery/db.sqlite3
+workery/db.sqlite3-journal
+
+# Do not share your 'django-haystack' related files.
+workery/workery/whoosh_index
+
+# Do not share real-life production data.
+prod_*.csv
+
+# Project related notes.
+private_notes.txt
+
+# Do not share collected static files.
+workery/workery/static
+workery/staticfiles
